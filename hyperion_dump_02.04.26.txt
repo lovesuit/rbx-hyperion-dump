@@ -1,11 +1,17 @@
+
 inline uint64_t subIntegrityChecks[12] = {
     0x6b09b, 0x8b6d1, 0x15d57d,
     0x2ed2e, 0x30f72, 0x3e53e,
     0x3f0d0, 0x48b19, 0x520e4,
     0x61f86, 0x623a5, 0x65814
 };
+
 inline uintptr_t generalIntegrityCheck = 0x13214f
+
 inline uintptr_t controlFlowGuard = 0xc005d0
+
 inline uintptr_t consoleCheck = 0x6b09b
+
 inline uintptr_t icebpCMP = 0x1c014
+
 inline uintptr_t setnzPattern = 0x2cb1a
