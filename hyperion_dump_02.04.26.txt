@@ -1,5 +1,5 @@
 
-// INTEGRITY CHECKS (12)
+// INTEGRITY CHECKS 
 inline uint64_t subIntegrityChecks[12] = {
     0x6b09b, 0x8b6d1, 0x15d57d,
     0x2ed2e, 0x30f72, 0x3e53e,
@@ -12,24 +12,35 @@ inline uintptr_t consoleCheck = 0x6b09b;
 inline uintptr_t icebpCMP = 0x1c014;
 inline uintptr_t setnzPattern = 0x2cb1a;
 
-// ANTI-DEBUG 
-inline uintptr_t isDebuggerPresentCall = 0x20de9a;
-inline uintptr_t ntQueryPattern = 0x8181f;
+// ANTI-DEBUG
+inline uintptr_t isDebuggerPresentCall = 0x20de9a;  
+inline uintptr_t ntQueryPattern = 0x8181f;          
 
-// VIRTUALIZATION 
-inline uintptr_t vmEntryPattern = 0x12d03d9;
+// VIRTUALIZATION & TIMING
+inline uintptr_t vmEntryPattern = 0x12d03d9;   
 inline uintptr_t rdtscCheck = 0x1a2ed;        
-inline uintptr_t cpuidCheck = 0x1aced;       
+inline uintptr_t cpuidCheck = 0x1aced;         
 
 // CRYPTOGRAPHY 
 inline uintptr_t aesSboxTable = 0x145ab80;
 
-// DIRECT SYSCALLS 
-inline uintptr_t syscallDirect = 0x100e0;    
+// DIRECT SYSCALLS
+inline uintptr_t syscallDirect = 0x100e0;      
 inline uintptr_t sysenterDirect = 0x5c84d;    
-inline uintptr_t int2eSyscall = 0x86d24;      
+inline uintptr_t int2eSyscall = 0x86d24;       
 
 // ADVANCED ANTI-DEBUG 
-inline uintptr_t icebpTrap = 0x131;         
-inline uintptr_t int3Breakpoint = 0x235;     
+inline uintptr_t icebpTrap = 0x131;           
+inline uintptr_t int3Breakpoint = 0x235;       
 inline uintptr_t jmpHook = 0x298e6;           
+inline uintptr_t tebPebAccess = 0x1d5d86;     
+inline uintptr_t infiniteLoopTrap = 0x35851;  
+inline uintptr_t nopSled = 0xd40557;           
+
+// FPU ANTI-EMULATION
+inline uintptr_t fninit = 0x1be40;
+inline uintptr_t fwait = 0x10013;             
+
+// FUNCTION STRUCTURE 
+inline uintptr_t standardPrologue = 0x34246;   
+inline uintptr_t altPrologue = 0x53ee9e;      
